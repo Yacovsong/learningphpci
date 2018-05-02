@@ -9,6 +9,7 @@ class User_model extends CI_Model{
 		// return $query;
 
 		$arr=array(
+			'uid'=>1,
 			'uname'=>$name,
 			'pass'=>$pass,
 		);

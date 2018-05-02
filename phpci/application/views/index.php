@@ -6,6 +6,7 @@
 	}else{
 		$name=$this->session->userdata('uname');
 		echo $name."已登录";
+		echo "<a href='blog/all'>个人中心</a>";
 		echo "&nbsp;&nbsp;"."<a href='user/unlogin'>注销</a>";
 	}
 ?>
