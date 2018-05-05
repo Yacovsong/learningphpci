@@ -27,6 +27,18 @@ class Blog extends CI_Controller{
         }
     }
 
+    public function do_add(){
+	    $cid=$this->input->post('catalog');
+	    $title=$this->input->post('title');
+	    $con=$this->input->post('con');
+
+	    $this->load->model('Blog_model');
+        $result=$this->Blog_model->add_pass($cid,$title,$con);
+        if ($result){
+            redirect('Blog/index');
+        }
+    }
+
     public function add_article(){
 	    $this->load->model('Blog_model');
 	    $result=$this->Blog_model->get_catalog();

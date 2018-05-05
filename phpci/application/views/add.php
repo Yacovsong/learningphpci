@@ -1,6 +1,6 @@
 <base href="<?php echo site_url();?>">
 <meta charset="utf-8">
-<form action="Blog/add" method="post">
+<form action="Blog/do_add" method="post">
     标题：<input type="text" name="title">
     <select name="catalog" id="">
         <?php

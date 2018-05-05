@@ -19,5 +19,20 @@ class Blog_model extends CI_Model{
 	    $query=$this->db->get('t_blog_catalogs');
 	    return $query->result();
     }
+
+    public function add_pass($cid,$title,$con){
+	    $time=date('Y-m-d H:i:s',time());
+	    $uid=$this->session->userdata('uid');
+	    $arr=array(
+	        'TITLE'=>$title,
+            'CONTENT'=>$con,
+            'ADD_TIME'=>$time,
+            'WRITER'=>$uid,
+            'CATALOG_ID'=>$cid,
+        );
+
+	    $query=$this->db->insert('t_blogs',$arr);
+	    return $query;
+    }
 }
 ?>
