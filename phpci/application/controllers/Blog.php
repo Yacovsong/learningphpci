@@ -8,7 +8,8 @@ class Blog extends CI_Controller{
 	public function index(){
 		//echo $this->session->userdata('uname');
 		$this->load->model('Blog_model');
-		$result=$this->Blog_model->get_all();
+		$result=$this->Blog_model->get_writer_by_data();
+		//$result=$this->Blog_model->get_all();
 		$data['blogs']=$result;
 		$this->load->view('index.php',$data);
 	}

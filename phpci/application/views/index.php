@@ -19,8 +19,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	// print_r($blogs);
 	// echo "</pre>";
 ?>
-<h4>标题：<?php echo $value->TITLE?></h4>
-<li>时间：<?php echo $value->ADD_TIME?></li>
+<h4>标题：<?php echo $value->TITLE;?></h4>
+<li>时间：<?php echo $value->ADD_TIME;?></li>
+<li>作者：<?php echo $value->uname;?></li>
 <p><?php echo $value->CONTENT?></p>
 <hr>
 

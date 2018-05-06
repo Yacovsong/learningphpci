@@ -15,6 +15,12 @@ class Blog_model extends CI_Model{
 	    return $query;
     }
 
+    public function get_writer_by_data(){
+	    $sql="select * from t_blogs,user where t_blogs.WRITER=user.uid";
+	    $query=$this->db->query($sql);
+	    return $query->result();
+    }
+
     public function get_catalog(){
 	    $query=$this->db->get('t_blog_catalogs');
 	    return $query->result();
